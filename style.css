@@ -347,3 +347,25 @@ footer .imprint {
 	display: inline-block;
 	margin-bottom: 15px;
 }
+
+footer .wp-block-search .wp-block-search__input {
+	background-color: var(--rg-background-color) !important;
+	color: var(--rg-text-color);
+	max-width: 200px;
+}
+footer .wp-block-latest-posts.wp-block-latest-posts__list {
+	list-style: circle;
+}
+
+.page-tags .metadata ul li, .metadata p.taglink a {
+	margin-bottom: 1rem;
+	display: inline-block;
+	margin-right: 10px;
+	list-style-type: circle;
+	padding: 6px 12px;
+	background: #456462;
+	border-radius: 20px;
+}
+#commentform p {
+	margin-bottom: 0;
+}

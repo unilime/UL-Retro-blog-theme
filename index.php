@@ -53,7 +53,7 @@ get_header(); ?>
 
 				<div class="metadata">
 					<?php if ( ! is_singular() ) : ?>
-						<span class="u-pull-right" ><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_date(); ?></a></span>
+						<span class="u-pull-right" ><a href="<?php the_permalink(); ?>" rel="bookmark"><?php echo get_the_date(); ?></a></span>
 					<?php else : ?>
 
 						<?php
@@ -88,7 +88,8 @@ get_header(); ?>
 							<hr>
 							<?php if ( is_single() ) : ?>
 							<p><span class="linkcat"><?php esc_html_e( 'Filed under: ', 'retrogeek' ); ?> <?php the_category( ',' ); ?> </span> -  @ <?php the_date(); ?> <?php the_time(); ?> <?php edit_post_link( __( 'Edit This', 'retrogeek' ) ); ?></p>
-							<p class="taglink"><?php the_tags(); ?></p>
+							<p class="taglink"><?php the_tags(null, ''); ?></p>
+							<p class="author"><?php esc_html_e( 'Author: ', 'retrogeek' );?><a href="<?php echo get_author_posts_url(get_the_author_meta('ID'))?>"><?php  echo get_the_author_meta('display_name')?></a></p>
 							<?php else : ?>
 							<p><?php esc_html_e( 'Published', 'retrogeek' ); ?> @ <?php the_date(); ?> <?php the_time(); ?> <?php edit_post_link( __( 'Edit This', 'retrogeek' ) ); ?></p>
 							<?php endif; ?>

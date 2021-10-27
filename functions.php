@@ -101,10 +101,10 @@ add_action( 'admin_head', 'retrogeek_css_admin_vars' );
  *  Enqueue style sheets.
  */
 function retrogeek_add_theme_scripts() {
-	wp_enqueue_script( 'retrogeek-javascript', get_template_directory_uri() . '/assets/js/retrogeek_func.js', false, 42, true );
+    wp_enqueue_script( 'retrogeek-javascript', get_template_directory_uri() . '/assets/js/retrogeek_func.js', false, 42, true );
 	wp_enqueue_style( 'retrogeek-normalize', get_template_directory_uri() . '/assets/css/normalize.css', false, '42', 'all' );
 	wp_enqueue_style( 'retrogeek-skeleton', get_template_directory_uri() . '/assets/css/skeleton.css', 'retrogeek-normalize', '42', 'all' );
-	wp_enqueue_style( 'retrogeek-style', get_template_directory_uri() . '/style.css', 'retrogeek-skeleton', '42', 'all' );
+	wp_enqueue_style( 'retrogeek-style', get_template_directory_uri() . '/style.css', 'retrogeek-skeleton', '47', 'all' );
 
 	// Output custom CSS to site.
 	$css_str = RetroGeek_Customize::header_output();
@@ -260,4 +260,11 @@ ALS;
 	}
 
 	return $asciilogo_string;
+}
+
+add_filter('comment_form_default_fields', 'unset_url_field');
+function unset_url_field($fields){
+    if(isset($fields['url']))
+        unset($fields['url']);
+    return $fields;
 }

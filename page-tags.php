@@ -11,10 +11,10 @@ while (have_posts()) :
     ?>
     <div class="row">
         <div class="two columns">&nbsp;</div>
-        <div id="primary" class="eight columns">
+        <div id="primary" class="eight columns page-tags">
             <div class="entry-right">
                 <header class="entry-header">
-                    <h5 class="entry-title" id="post-<?php the_ID(); ?>"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h5>
+                    <h3 class="entry-title" id="post-<?php the_ID(); ?>"><?php the_title(); ?></h3>
                 </header>
                 <div class="metadata">
                     <?php
