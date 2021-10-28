@@ -21,6 +21,22 @@ get_header(); ?>
 
 	<article class="content-area">
 		<?php
+        if(is_author()) {
+            ?>
+            <div class="author-section">
+                <span class="author-avatar"><?php echo get_avatar(get_the_author_meta('ID'), '80');?></span>
+                <span class="author-name">
+                     Author:
+                    <?php printf(
+                    /* translators: %s: Author name. */
+                        esc_html__( '%s', 'retrogeek' ),
+                        get_the_author()
+                    );
+                    ?>
+                </span>
+            </div>
+            <?php
+        }
 		if ( have_posts() ) :
 			while ( have_posts() ) :
 				the_post();
@@ -38,7 +54,7 @@ get_header(); ?>
 			<div class="entry-right">
 				<header class="entry-header">
                     <?php if ( ! is_singular() ) : ?>
-					    <h5 class="entry-title" id="post-<?php the_ID(); ?>"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h5>
+					    <h4 class="entry-title" id="post-<?php the_ID(); ?>"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h4>
                     <?php else: ?>
                         <h3 class="entry-title" id="post-<?php the_ID(); ?>"><?php the_title(); ?></h3>
                     <?php endif; ?>

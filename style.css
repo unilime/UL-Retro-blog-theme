@@ -354,7 +354,7 @@ footer .wp-block-search .wp-block-search__input {
 	max-width: 200px;
 }
 footer .wp-block-latest-posts.wp-block-latest-posts__list {
-	list-style: circle;
+	list-style: circle inside;
 }
 
 .page-tags .metadata ul li, .metadata p.taglink a {
@@ -368,4 +368,13 @@ footer .wp-block-latest-posts.wp-block-latest-posts__list {
 }
 #commentform p {
 	margin-bottom: 0;
+}
+.author-section {
+	margin-bottom: 50px;
+	font-size: 1.5em;
+}
+.author-section .author-name {
+	display: inline-block;
+	vertical-align: top;
+	padding-top: 5px;
 }
