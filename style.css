@@ -378,3 +378,6 @@ footer .wp-block-latest-posts.wp-block-latest-posts__list {
 	vertical-align: top;
 	padding-top: 5px;
 }
+.wp-block-search .wp-block-search__label {
+	width: auto;
+}
