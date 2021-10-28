@@ -104,7 +104,7 @@ function retrogeek_add_theme_scripts() {
     wp_enqueue_script( 'retrogeek-javascript', get_template_directory_uri() . '/assets/js/retrogeek_func.js', false, 42, true );
 	wp_enqueue_style( 'retrogeek-normalize', get_template_directory_uri() . '/assets/css/normalize.css', false, '42', 'all' );
 	wp_enqueue_style( 'retrogeek-skeleton', get_template_directory_uri() . '/assets/css/skeleton.css', 'retrogeek-normalize', '42', 'all' );
-	wp_enqueue_style( 'retrogeek-style', get_template_directory_uri() . '/style.css', 'retrogeek-skeleton', '49', 'all' );
+	wp_enqueue_style( 'retrogeek-style', get_template_directory_uri() . '/style.css', 'retrogeek-skeleton', '50', 'all' );
 
 	// Output custom CSS to site.
 	$css_str = RetroGeek_Customize::header_output();
