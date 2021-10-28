@@ -52,7 +52,7 @@ body {  background-color: var(--rg-background-color);
 
 
 /* code tag wrap amd color */
-code { display: block; overflow-x: auto; padding: .5em; background: #444444; color: #8ed1fc; }
+code { overflow-x: auto; padding: .5em; background: #444444; color: #8ed1fc; }
 
 /* add border to sticky post */
 .sticky { border: #ffffff solid 2px; padding:10px; margin-bottom: 30px;}
